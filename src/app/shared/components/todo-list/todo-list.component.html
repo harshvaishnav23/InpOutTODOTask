@@ -1,0 +1,12 @@
+
+
+<ul class="list-group" *ngIf="getTodoArr.length > 0; else noTodo">
+    <li class="list-group-item" *ngFor="let todo of getTodoArr">
+      {{todo}}
+    </li>
+  </ul>
+  <ng-template #noTodo>
+    <p class="alert alert-success">
+      No TODO Item here
+    </p>
+  </ng-template>

@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'InpOutTODOTask';
+  todoArr : Array<string> = [];
+
+  addToDo(todo : HTMLInputElement){
+    let val = todo.value;
+    this.todoArr.push(val);
+    todo.value = '';
+  }
+
+  getToDoItem(val : string){
+    this.todoArr.push(val)
+  }
 }
